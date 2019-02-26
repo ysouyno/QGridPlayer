@@ -15,3 +15,15 @@ For different platforms, the following dependencies need to be installed.
 ```console
 sudo pacman -S gst-libav
 ```
+
+### Debian
+
+* **APIs for multimedia functionality**
+```console
+sudo apt-get install qtmultimedia5-dev
+```
+
+* **Qt 5 Multimedia module plugins**
+```console
+sudo apt-get install libqt5multimedia5-plugins
+```
