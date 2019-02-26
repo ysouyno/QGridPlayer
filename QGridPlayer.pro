@@ -4,7 +4,7 @@
 #
 #-------------------------------------------------
 
-QT       += core gui
+QT       += core gui multimediawidgets
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -26,10 +26,16 @@ CONFIG += c++11
 
 SOURCES += \
         main.cpp \
-        qgridplayer.cpp
+        qgridplayer.cpp \
+        videowidget.cpp \
+        mediaplayer.cpp \
+        gridlayout.cpp
 
 HEADERS += \
-        qgridplayer.h
+        qgridplayer.h \
+        videowidget.h \
+        mediaplayer.h \
+        gridlayout.h
 
 FORMS += \
         qgridplayer.ui
