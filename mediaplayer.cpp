@@ -6,9 +6,10 @@ MediaPlayer::MediaPlayer(QObject *parent, QMediaPlayer::Flags flags)
     videoWidget = new VideoWidget;
     setVideoOutput(videoWidget);
 
-    slider = new QSlider(Qt::Horizontal);
+    slider = new ClickableSlider(Qt::Horizontal);
     slider->setRange(0, static_cast<int>(duration() / 1000));
-    connect(slider, &QSlider::sliderMoved, this, &MediaPlayer::seek);
+    connect(slider, &ClickableSlider::sliderMoved, this, &MediaPlayer::seek);
+    connect(slider, SIGNAL(sliderClicked(int)), this, SLOT(seek(int)));
 
     connect(this, &QMediaPlayer::durationChanged, this, &MediaPlayer::durationChanged);
     connect(this, &QMediaPlayer::positionChanged, this, &MediaPlayer::positionCHanged);

@@ -29,13 +29,15 @@ SOURCES += \
         qgridplayer.cpp \
         videowidget.cpp \
         mediaplayer.cpp \
-        gridlayout.cpp
+        gridlayout.cpp \
+        clickableslider.cpp
 
 HEADERS += \
         qgridplayer.h \
         videowidget.h \
         mediaplayer.h \
-        gridlayout.h
+        gridlayout.h \
+        clickableslider.h
 
 FORMS += \
         qgridplayer.ui
